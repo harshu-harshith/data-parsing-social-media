@@ -1,0 +1,261 @@
+/* Basic Reset */
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #0c0c0c; /* Dark background */
+  color: #00c3ff; /* Neon blue text */
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styling */
+header {
+  background: #0c0c0c; /* Dark background */
+  color: #00c3ff; /* Neon blue text */
+  padding: 1rem;
+  text-align: center;
+  letter-spacing: 2px;
+  box-shadow: 0px 4px 6px rgba(0, 195, 255, 0.6); /* Neon blue shadow */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Main Content Area */
+main {
+  padding: 2rem;
+  flex-grow: 1;
+}
+
+/* Section Styling */
+section {
+  margin-bottom: 2rem;
+  background-color: #0c0c0c; /* Dark background */
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 195, 255, 0.6); /* Neon blue shadow */
+}
+
+/* Platform Button Styling */
+#socialMediaOptions button {
+  font-size: 18px;
+  color: #fff; /* White text */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Instagram Button */
+#instagramButton {
+  background-color: #E1306C; /* Instagram Pink */
+}
+
+#instagramButton:hover {
+  background-color: #d21f68; /* Darker Instagram Pink */
+  box-shadow: 0px 4px 8px rgba(225, 48, 108, 0.7); /* Darker pink shadow */
+}
+
+/* WhatsApp Button */
+#whatsappButton {
+  background-color: #25D366; /* WhatsApp Green */
+}
+
+#whatsappButton:hover {
+  background-color: #1e8f4f; /* Darker WhatsApp Green */
+  box-shadow: 0px 4px 8px rgba(37, 211, 102, 0.7); /* Darker green shadow */
+}
+
+/* Facebook Button */
+#facebookButton {
+  background-color: #1877F2; /* Facebook Blue */
+}
+
+#facebookButton:hover {
+  background-color: #165eab; /* Darker Facebook Blue */
+  box-shadow: 0px 4px 8px rgba(24, 119, 242, 0.7); /* Darker blue shadow */
+}
+
+/* General Button Styling for Other Buttons */
+button:not(#instagramButton):not(#whatsappButton):not(#facebookButton) {
+  background-color: #333; /* Default dark background for other buttons */
+  color: #fff; /* White text */
+  border: 1px solid #00c3ff; /* Neon blue border */
+}
+
+button:not(#instagramButton):not(#whatsappButton):not(#facebookButton):hover {
+  background-color: #00c3ff; /* Neon blue background on hover */
+  color: #000; /* Black text on hover */
+  box-shadow: 0px 4px 8px rgba(0, 195, 255, 0.7); /* Neon blue shadow */
+}
+
+/* Visibility Toggle for Sections */
+.section {
+  display: none;
+}
+
+.section.visible {
+  display: block;
+}
+
+/* Upload Section Styling */
+#uploadSection input[type="file"] {
+  margin-right: 1rem;
+  background-color: #333; /* Dark background */
+  color: #00c3ff; /* Neon blue text */
+  border: 1px solid #00c3ff;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+#uploadSection input[type="file"]:hover {
+  background-color: #00c3ff; /* Neon blue background on hover */
+  color: #000; /* Black text on hover */
+  cursor: pointer;
+}
+
+/* Gallery and Modal Styling */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.gallery-item {
+  cursor: pointer;
+  object-fit: cover;
+  border: 2px solid #00c3ff; /* Neon blue border */
+  transition: 0.3s;
+  width: 150px;
+  height: 150px;
+}
+
+.gallery-item:hover {
+  border-color: #00ff7f; /* Lighter neon green */
+}
+
+/* Modal for full image/video display */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.full-media {
+  max-width: 90%;
+  max-height: 90%;
+  border: 3px solid #00c3ff; /* Neon blue border */
+}
+
+/* Footer Styling */
+footer {
+  background: #0c0c0c; /* Dark background */
+  color: #00c3ff; /* Neon blue text */
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  border-top: 1px solid #444;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  main {
+    padding: 1rem;
+  }
+
+  .filter-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-buttons button,
+  .filter-buttons select {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+.filter-buttons {
+  font-size: 20px;
+  color: navajowhite;
+  background-color: rgb(88, 154, 174);
+}
+
+button {
+  font-size: 18px;
+  color: #fff; /* White text */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Content container for rendering HTML files */
+#contentContainer {
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensures it's on top of other elements */
+  display: none; /* Initially hidden */
+  overflow: hidden; /* Prevents scrollbars in case of iframe overflow */
+}
+
+/* Iframe to display HTML content */
+#contentFrame {
+  width: 100%;
+  height: 100%;
+  border: none; /* Removes border around iframe */
+}
+
+/* Close button styles */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #f00;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 1001; /* Ensures it's on top of other elements */
+}
+
+/* Hide the content container when not in use */
+.hidden {
+  display: none;
+}

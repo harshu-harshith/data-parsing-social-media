@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Viewer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Data Viewer</h1>
+    </header>
+
+    <main>
+        <!-- Platform Selection Buttons -->
+        <div id="socialMediaOptions" style="text-align: center;">
+            <button id="instagramButton">
+                <i class="fab fa-instagram"></i> Instagram
+            </button>
+            <button id="whatsappButton">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </button>
+            <button id="facebookButton">
+                <i class="fab fa-facebook"></i> Facebook
+            </button>
+        </div>
+
+        <!-- Instagram Section -->
+        <div id="instagramPage" class="section">
+            <h2>Instagram Data</h2>
+            <section>
+                <h2>Upload Instagram Data</h2>
+                <input type="file" id="fileInputInstagram" accept=".zip">
+                <button id="uploadButtonInstagram">Upload</button>
+            </section>
+
+            <section id="dataSectionInstagram" style="display: none;">
+                <h2>Instagram Data Options</h2>
+                <div class="filter-buttons">
+                    <button id="showAllFilesInstagram">Show All Files</button>
+                    <button id="showMessagesInstagram">Messages</button>
+                    <button id="showLoginDetailsInstagram">Login Details</button>
+                    <button id="showAllImagesInstagram">All Images</button>
+                    <button id="showAllVideosInstagram">All Videos</button>
+                    <button id="personalinformation">Full info</button>
+                    <button id="devices">Deices used</button>
+                    <button id="emails">Emails used</button>
+                </div>
+    
+                <!-- Container for content -->
+                <div id="contentContainer" class="hidden">
+                    <button id="closeContent" class="close-btn">X</button>
+                    <iframe id="contentFrame" class="content-frame"></iframe>
+                </div>
+                
+                <!-- Container for file display -->
+                <div id="fileDisplayContainer" class="hidden">
+                    <button id="closeFileDisplay" class="close-btn">X</button>
+                    <iframe id="fileDisplayFrame" class="content-frame"></iframe>
+                </div>
+            </section>
+            <div id="dataOptionsInstagram"></div>
+        </div>
+
+        <!-- WhatsApp Section (Placeholder for now) -->
+        <div id="whatsappPage" class="section">
+            <h2>WhatsApp Data</h2>
+            <p>WhatsApp data will be handled here later.</p>
+        </div>
+
+        <!-- Facebook Section (Placeholder for now) -->
+        <div id="facebookPage" class="section">
+            <h2>Facebook Data</h2>
+            <p>Facebook data will be handled here later.</p>
+        </div>
+    </main>
+</body>
+
+</html>
